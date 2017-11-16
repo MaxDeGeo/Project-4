@@ -16,3 +16,4 @@ The goal of this project is to understand JavaScript more and how I can use Java
 
 For this project I will be focusing on using CSS Grid Layout instead of using a JavaScript Library. I have already spoken with Liz, and she expressed that it would be alright for me to focus on that instead of a library. I will still be using jQuery and jQueryUI for the interactive side of the project, while using the CSS Grid Layout for the design and formatting of the page.
 
+I will go about learning this by using tutorials provided by MDN and videos on youtube and on Lynda.com that will help provide me with the resources necessary to complete my final project.
