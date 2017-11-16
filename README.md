@@ -3,7 +3,10 @@ My approach to this project will be to create an interactive schedule in which t
 	
 ### Schedule 1
 The first schedule will allow the user to drag and place specific events into a schedule, each type color coded to create an easy to view schedule.
-	
+
+<p align="center">
+	<img src="https://github.com/MaxDeGeo/Project-4/blob/master/Mockups/Schedule1.png" />
+</p>	
 ### Schedule 2
 The second schedule will allow the user to create custom events for each day of the week, using the same feature as the first schedule, yet, it will remove the dates from the side, and allow the user to input a custom time frame for the block. The user will also be allowed to turn off and on the days of the week depending on what they want to view and add to.
 	
