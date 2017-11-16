@@ -11,4 +11,3 @@
 	The third schedule will continue the same idea as the first and second, except the size of the blocks will be bigger depending on how long they are in terms of time, and that they can be edited and removed once they are created.
 
 	The goal of this project is to understand JavaScript more and how I can use JavaScript and jQuery libraries to help create more professional and interactive websites.
-
