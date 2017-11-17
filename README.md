@@ -12,14 +12,14 @@ The first schedule will allow the user to drag and place specific events into a 
 The second schedule will allow the user to create custom events for each day of the week, using the same feature as the first schedule, yet, it will remove the dates from the side, and allow the user to input a custom time frame for the block. The user will also be allowed to turn off and on the days of the week depending on what they want to view and add to.
 	
 <p align="center">
-	<img src="https://github.com/MaxDeGeo/Project-4/blob/master/Mockups/Schedule 2.png" />
+	<img src="https://github.com/MaxDeGeo/Project-4/blob/master/Mockups/Schedule2.png" />
 </p>
 
 ### Schedule 3
 The third schedule will continue the same idea as the first and second, except the size of the blocks will be bigger depending on how long they are in terms of time, and that they can be edited and removed once they are created.
 
 <p align="center">
-	<img src="https://github.com/MaxDeGeo/Project-4/blob/master/Mockups/Schedule 3.png" />
+	<img src="https://github.com/MaxDeGeo/Project-4/blob/master/Mockups/Schedule3.png" />
 </p>
 
 ### Goal
