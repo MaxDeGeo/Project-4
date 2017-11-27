@@ -51,6 +51,64 @@ body {
 	background-color: lightgray;
 }
 
+/* Column Section */
+.col-whole {
+    width: 100%;
+}
+
+.col-three-fourth {
+    width: 75%;
+}
+
+.col-two-third {
+    width: 66.66%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33%;
+}
+
+.col-fourth {
+    width: 25%;
+}
+
+.col-fifth {
+    width: 20%;
+}
+
+.col-sixth {
+    width: 16.67%;
+}
+
+.col-seventh {
+    width: 14.285%;
+}
+
+.col-eighth {
+    width: 12.5%;
+}
+
+.col-ninth {
+    width: 11.11%;
+}
+
+.col-tenth {
+    width: 10%;
+}
+
+.col-eleventh {
+    width: 9.0909%;
+}
+
+.col-twelfth {
+    width: 8.3333%;
+}
+/* Column Section End */
+
 /* Nav Section */
 
 nav {
@@ -92,3 +150,27 @@ nav {
 #nav-section p a:hover {
 	color: white;
 }
+
+/* Nav Section End */
+
+/* Content */
+
+#home {
+	padding-top: 200px;
+}
+
+.content {
+	width: 70%;
+	height: auto;
+	display: flex;
+	margin-left: 15%;
+	padding-bottom: 50px;
+}
+
+img {
+	height: 100%;
+	width: 90%;
+	margin-left: 5%;
+}
+
+/* Content Section End */
