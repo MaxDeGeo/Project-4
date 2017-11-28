@@ -195,9 +195,11 @@ nav {
 	background-color: darkgray;
 	margin-top: 25px;
 	width: 80%;
-	height: 300px;
+	height: auto;
 	margin-left: 10%;
 	margin-bottom: 100px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .padding {
@@ -217,6 +219,7 @@ nav {
 
 .col {
 	background: rgb(255,150,150);
+	text-align: center;
 }
 
 /* Content Section End */
