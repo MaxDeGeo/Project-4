@@ -51,6 +51,64 @@ body {
 	background-color: lightgray;
 }
 
+/* Column Section */
+.col-whole {
+    width: 100%;
+}
+
+.col-three-fourth {
+    width: 75%;
+}
+
+.col-two-third {
+    width: 66.66%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33%;
+}
+
+.col-fourth {
+    width: 25%;
+}
+
+.col-fifth {
+    width: 20%;
+}
+
+.col-sixth {
+    width: 16.67%;
+}
+
+.col-seventh {
+    width: 14.285%;
+}
+
+.col-eighth {
+    width: 12.5%;
+}
+
+.col-ninth {
+    width: 11.11%;
+}
+
+.col-tenth {
+    width: 10%;
+}
+
+.col-eleventh {
+    width: 9.0909%;
+}
+
+.col-twelfth {
+    width: 8.3333%;
+}
+/* Column Section End */
+
 /* Nav Section */
 
 nav {
@@ -67,6 +125,16 @@ nav {
 	padding-top: 8px;
 	padding-left: 1%;
 	color: lightgray;
+}
+
+#name a {
+	color: lightgray;
+	text-decoration: none;
+	transition: .5s;
+}
+
+#name a:hover {
+	color: white;
 }
 
 #nav-section {
@@ -88,7 +156,39 @@ nav {
 	transition: .5s;
 }
 
-
 #nav-section p a:hover {
 	color: white;
 }
+
+/* Nav Section End */
+
+/* Footer */
+
+.Site {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+  
+.Site-content {
+	flex: 1;
+}
+
+footer {
+	background-color: gray;
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	font-family: sans-serif;
+	color: darkgray;
+	line-height: 1.1em;
+}
+
+footer div p {
+	transform: translateY(50%);
+}
+
+footer a {
+	color: darkgray;
+}
+/* Footer End */

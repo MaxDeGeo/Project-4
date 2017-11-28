@@ -127,6 +127,16 @@ nav {
 	color: lightgray;
 }
 
+#name a {
+	color: lightgray;
+	text-decoration: none;
+	transition: .5s;
+}
+
+#name a:hover {
+	color: white;
+}
+
 #nav-section {
 	float: right;	
 	width: 500px;
@@ -145,7 +155,6 @@ nav {
 	color: lightgray;
 	transition: .5s;
 }
-
 
 #nav-section p a:hover {
 	color: white;
@@ -171,6 +180,43 @@ img {
 	height: 100%;
 	width: 90%;
 	margin-left: 5%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+	transition: box-shadow .3s ease-out;
 }
 
+img:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: box-shadow .3s ease-in; 
+}
 /* Content Section End */
+
+/* Footer */
+
+.Site {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+  
+.Site-content {
+	flex: 1;
+}
+
+footer {
+	background-color: gray;
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	font-family: sans-serif;
+	color: darkgray;
+	line-height: 1.1em;
+}
+
+footer div p {
+	transform: translateY(50%);
+}
+
+footer a {
+	color: darkgray;
+}
+/* Footer End */
