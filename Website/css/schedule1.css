@@ -52,6 +52,7 @@ body {
 }
 
 /* Column Section */
+
 .col-whole {
     width: 100%;
 }
@@ -107,7 +108,24 @@ body {
 .col-twelfth {
     width: 8.3333%;
 }
+
 /* Column Section End */
+
+/* Span Section */
+
+.span2 { grid-column: auto / span 2;}
+.span3 { grid-column: auto / span 3;}
+.span4 { grid-column: auto / span 4;}
+.span5 { grid-column: auto / span 5;}
+.span6 { grid-column: auto / span 6;}
+.span7 { grid-column: auto / span 7;}
+.span8 { grid-column: auto / span 8;}
+.span9 { grid-column: auto / span 9;}
+.span10 { grid-column: auto / span 10;}
+.span11 { grid-column: auto / span 11;}
+.span12 { grid-column: auto / span 12;}
+
+/* Span Section End */
 
 /* Nav Section */
 
@@ -161,6 +179,47 @@ nav {
 }
 
 /* Nav Section End */
+
+/* Content Section */
+
+#schedule {
+	margin-top: 150px;
+	background-color: darkgray;
+	width: 80%;
+	margin-left: 10%;
+	height: 600px;
+	margin-bottom: 50px;
+}
+
+#cards-content {
+	background-color: darkgray;
+	margin-top: 25px;
+	width: 80%;
+	height: 300px;
+	margin-left: 10%;
+	margin-bottom: 100px;
+}
+
+.padding {
+	width: 98%;
+	margin-left: 1%;
+}
+
+.wrapper {
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: 20px;
+}
+
+.col {
+	background: rgb(255,150,150);
+}
+
+/* Content Section End */
 
 /* Footer */
 
