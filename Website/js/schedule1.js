@@ -3,7 +3,7 @@ window.onload = function() {
 }
 
 function ColorCreator() {
-    let cardArray = document.querySelectorAll("div .col")
+    let cardArray = document.querySelectorAll("#cards-content div .col")
     let tempValue = 0;
 
 
