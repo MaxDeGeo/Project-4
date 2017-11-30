@@ -196,7 +196,7 @@ nav {
 	background-color: darkgray;
 	width: 72%;
 	margin-left: 18%;
-	height: 705px;
+	height: 707px;
 	margin-bottom: 50px;
 }
 
@@ -234,7 +234,7 @@ nav {
 	max-width: 100%;
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	grid-gap: 20px;
+	grid-gap: 10px;
 }
 
 .col {
@@ -247,12 +247,30 @@ nav {
 	height: 45px;
 }
 
+#activity-wrapper {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 8px;
+}
+
+.activity-col {
+	border-style: dashed;
+	border-color: black;
+	border-width: 1px;
+	text-align: center;
+	height: 45px;
+}
+
 .center-text {
-	margin-top: 9%;
+	margin-top: 7%;
 }
 
 .col .center-text {
-	margin-top: 10%;
+	margin-top: 8%;
 }
 
 /* Content Section End */
