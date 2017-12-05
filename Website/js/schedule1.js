@@ -1,5 +1,50 @@
 window.onload = function() {
+    
     ColorCreator();
+    $( ".draggable" ).draggable({
+        revert: "invalid",
+        appendTo: 'body',
+        helper: 'clone',
+        start: function(ev, ui) {
+            ui.helper.width($(this).width());
+        }
+    });
+    console.log("Working");
+    $( ".droppable" ).droppable({
+        tolerance: 'pointer',
+        hoverClass: 'highlight',
+        drop: function(event, ui) {
+            if ($(this).hasClass("droppable")) {
+                $(this).removeClass("empty").addClass("filled");
+                $(this).droppable("disable");
+            } else {
+              return false;
+            }
+            let item = ui.draggable;
+            //if (!ui.draggable.closest('.empty').length) item = item.draggable(); // if item was dragged from the source list - clone it
+            //this.innerHTML = ''; // clean the placeholder
+            item.css({
+              top: 0,
+              left: 0
+            }).appendTo(this); // append item to placeholder */
+        }
+        });
+        
+        $(".target").on('click', '.closer', function() {
+          var item = $(this).closest('.item');
+          item.fadeTo(200, 0, function() {
+            item.remove();
+          }) 
+        });   
+}
+
+function LockInPlace(schedulePosition, contentElement) {
+    let thisPosition = schedulePosition;
+    
+    let content = contentElement;
+
+    content.style.top = schedulePosition.style.top;
+    content.style.left = schedulePosition.style.left;
 }
 
 function ColorCreator() {
@@ -52,3 +97,4 @@ function ColorCreator() {
         }
     }
 }
+
