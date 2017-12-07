@@ -134,6 +134,7 @@ nav {
 	position: fixed;
 	background-color: gray;
 	width: 100%;
+	z-index: 1;
 }
 
 #name {
@@ -266,11 +267,12 @@ nav {
 }
 
 .center-text {
-	margin-top: 7%;
+	position: relative;
+	top: 13px;
 }
 
 .col .center-text {
-	margin-top: 8%;
+	/*margin-top: 8%;*/
 }
 
 .draggable {

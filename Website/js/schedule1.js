@@ -9,24 +9,25 @@ window.onload = function() {
             ui.helper.width($(this).width());
         }
     });
+
     console.log("Working");
     $( ".droppable" ).droppable({
         tolerance: 'pointer',
         hoverClass: 'highlight',
         drop: function(event, ui) {
             if ($(this).hasClass("droppable")) {
-                $(this).removeClass("empty").addClass("filled");
-                $(this).droppable("disable");
+                //$(this).removeClass("empty").addClass("filled");
+                //$(this).droppable("disable");
             } else {
               return false;
             }
             let item = ui.draggable;
-            //if (!ui.draggable.closest('.empty').length) item = item.draggable(); // if item was dragged from the source list - clone it
+            if (!ui.draggable.closest('.empty').length) item = item.draggable(); // if item was dragged from the source list - clone it
             //this.innerHTML = ''; // clean the placeholder
             item.css({
-              top: 0,
-              left: 0
-            }).appendTo(this); // append item to placeholder */
+              top: 15,
+              left: 15
+            }).appendTo(this); // append item to placeholder 
         }
         });
         
