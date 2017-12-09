@@ -4,6 +4,7 @@ window.onload = function() {
     $( ".draggable" ).draggable({
         revert: "invalid",
         appendTo: 'body',
+        stack: ".draggable",
         helper: 'clone',
         start: function(ev, ui) {
             ui.helper.width($(this).width());
@@ -36,10 +37,12 @@ window.onload = function() {
             
             if (!ui.draggable.closest('.empty').length) item = item.draggable(); // if item was dragged from the source list - clone it
             //this.innerHTML = ''; // clean the placeholder
-            item.css({
-              top: 15,
-              left: 15
-            }).appendTo(this); // append item to placeholder 
+            //item.css({
+              //top: 15,
+              //left: 15
+            //}).appendTo(this); // append item to placeholder 
+            item.clone().appendTo($(this));
+            item.draggable("enable");
         }
         });
         
@@ -110,10 +113,3 @@ function ColorCreator() {
         }
     }
 }
-
-function Copy() {
-    let original = this;
-
-    copy = original.cloneNode(true);
-}
-
