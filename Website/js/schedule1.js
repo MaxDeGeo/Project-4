@@ -16,12 +16,24 @@ window.onload = function() {
         hoverClass: 'highlight',
         drop: function(event, ui) {
             if ($(this).hasClass("droppable")) {
-                //$(this).removeClass("empty").addClass("filled");
-                //$(this).droppable("disable");
+                $(this).removeClass("empty").addClass("filled");
+                /*
+                if(ui.draggable === null)
+                {
+                    $(this).droppable("enabled");
+                }
+                else
+                {
+                    $(this).droppable("disable");    
+                }
+                */
+                $(ui.draggable).draggable("disable");
+                
             } else {
               return false;
             }
             let item = ui.draggable;
+            
             if (!ui.draggable.closest('.empty').length) item = item.draggable(); // if item was dragged from the source list - clone it
             //this.innerHTML = ''; // clean the placeholder
             item.css({
@@ -97,5 +109,11 @@ function ColorCreator() {
             break;
         }
     }
+}
+
+function Copy() {
+    let original = this;
+
+    copy = original.cloneNode(true);
 }
 
