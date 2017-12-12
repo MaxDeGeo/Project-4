@@ -49,6 +49,7 @@ table {
 
 body {
 	background-color: lightgray;
+	font-family: sans-serif;
 }
 
 /* Column Section */
@@ -281,7 +282,7 @@ nav {
 	left: 25%;
 	width: 50%;
 	height: auto;
-	/*overflow: auto;*/
+	overflow: auto;
 	background-color: rgba(0, 0, 0, 0);
 }
 
@@ -292,6 +293,20 @@ nav {
     border: 1px solid #888;
 	width: 85%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dropdown {
+	margin-left: 16px;
+	padding-bottom: 15px;
+	position: fixed;
+}
+
+.span {
+	margin-left: 14px;
+}
+
+#end {
+	margin-left: 15%;
 }
 
 /* The Close Button */
@@ -316,6 +331,14 @@ nav {
 	transition: .5s;
 }
 
+#submit {
+	margin-top: 5%;
+	width: 20%;
+	margin-left: 40%;
+	height: 50px;
+	margin-bottom: 30px;
+}
+
 /* End Pop Up Window */
 
 /* Form */
@@ -336,15 +359,31 @@ nav {
 }
 
 #boxes {
-	width: 90%;
-	margin-left: 5%;
+	width: 100%;
 }
 
 #boxes input {
 	margin-right: 9px;
 }
 
+#colorChoice {
+	margin-top: 30px;
+	margin-left: 14px;
+}
 
+#colorChoice input {
+	margin-left: 0px;
+}
+
+#description {
+	margin-left: 14px;
+	margin-top: 5%;
+}
+
+textarea {
+	width: 95%;
+	height: 200px;
+}
 
 /* Form */
 

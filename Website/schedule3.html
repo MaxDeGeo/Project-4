@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/schedule3.css">
-    <script src="js/schedule2.js"></script>
+    <link rel='stylesheet' href='css/spectrum.css'/> <!-- Color Picker CSS-->
+    <script src="js/schedule3.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src='js/spectrum.js'></script> <!-- Color Picker Script-->
     <title>Schedule 3</title>
 </head>
 <body class="Site">
@@ -128,6 +132,106 @@
         </div>
 
         <button id="button">Add</button>
+        <div id="popUp" class="pop-Up">
+            <div class="pop-Up-content">
+                <span class="close">&times;</span>
+                <form>
+                    <input id="eventName" type="text" placeholder="Add Event Name" name="eventTitle"><br>
+                    <div id="daysOfWeek">
+                        <p>Select Days</p>
+                        <div id="boxes">
+                            <input type="checkbox" name="day" value="sunday">Sunday</input>
+                            <input type="checkbox" name="day" value="monday">Monday</input>
+                            <input type="checkbox" name="day" value="tuesday">Tuesday</input>
+                            <input type="checkbox" name="day" value="wednesday">Wednesday</input>
+                            <input type="checkbox" name="day" value="thursday">Thursday</input>
+                            <input type="checkbox" name="day" value="friday">Friday</input>
+                            <input type="checkbox" name="day" value="saturday">Saturday</input>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <span class="span">
+                    <label id="start">Start Time:</label>
+                        <span class="dropdown">
+                            <select onfocus='this.size=10;' onblur='this.size=1;' 
+                            onchange='this.size=1; this.blur();' name="start-time">
+                                <option value="1am">1am</option>
+                                <option value="2am">2am</option>
+                                <option value="3am">3am</option>
+                                <option value="4am">4am</option>
+                                <option value="5am">5am</option>
+                                <option value="6am">6am</option>
+                                <option value="7am">7am</option>
+                                <option value="8am">8am</option>
+                                <option value="9am">9am</option>
+                                <option value="10am">10am</option>
+                                <option value="11am">11am</option>
+                                <option value="12pm">12pm</option>
+                                <option value="1pm">1pm</option>
+                                <option value="2pm">2pm</option>
+                                <option value="3pm">3pm</option>
+                                <option value="4pm">4pm</option>
+                                <option value="5pm">5pm</option>
+                                <option value="6pm">6pm</option>
+                                <option value="7pm">7pm</option>
+                                <option value="8pm">8pm</option>
+                                <option value="9pm">9pm</option>
+                                <option value="10pm">10pm</option>
+                                <option value="11pm">11pm</option>
+                                <option value="12am">12am</option>
+                            </select>
+                        </span>
+                    </span>
+                    <span class="span">
+                    <label id="end">End Time:</label>
+                        <span class="dropdown">
+                            <select onfocus='this.size=10;' onblur='this.size=1;' 
+                            onchange='this.size=1; this.blur();' name="start-time">
+                                <option value="1am">1am</option>
+                                <option value="2am">2am</option>
+                                <option value="3am">3am</option>
+                                <option value="4am">4am</option>
+                                <option value="5am">5am</option>
+                                <option value="6am">6am</option>
+                                <option value="7am">7am</option>
+                                <option value="8am">8am</option>
+                                <option value="9am">9am</option>
+                                <option value="10am">10am</option>
+                                <option value="11am">11am</option>
+                                <option value="12pm">12pm</option>
+                                <option value="1pm">1pm</option>
+                                <option value="2pm">2pm</option>
+                                <option value="3pm">3pm</option>
+                                <option value="4pm">4pm</option>
+                                <option value="5pm">5pm</option>
+                                <option value="6pm">6pm</option>
+                                <option value="7pm">7pm</option>
+                                <option value="8pm">8pm</option>
+                                <option value="9pm">9pm</option>
+                                <option value="10pm">10pm</option>
+                                <option value="11pm">11pm</option>
+                                <option value="12am">12am</option>
+                            </select>
+                        </span>
+                    </span>
+
+                    <div id="colorChoice">
+                        <label>Choose Color:</label>
+                        <input id="full"/>
+                    </div>
+
+                    <div id="description">
+                        <label>Description:</label>
+                        <br>
+                        <textarea></textarea>
+                    </div>
+
+                    <button id="submit">Create</button>
+                </form>
+            </div>
+        </div>
     </article>
 
     <main class="Site-content"></main>
