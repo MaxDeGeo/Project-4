@@ -299,6 +299,7 @@ nav {
 	margin-left: 16px;
 	padding-bottom: 15px;
 	position: fixed;
+	z-index: 2;
 }
 
 .span {

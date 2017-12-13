@@ -135,7 +135,7 @@
         <div id="popUp" class="pop-Up">
             <div class="pop-Up-content">
                 <span class="close">&times;</span>
-                <form>
+                <form method="POST">
                     <input id="eventName" type="text" placeholder="Add Event Name" name="eventTitle"><br>
                     <div id="daysOfWeek">
                         <p>Select Days</p>
@@ -155,7 +155,7 @@
                     <span class="span">
                     <label id="start">Start Time:</label>
                         <span class="dropdown">
-                            <select onfocus='this.size=10;' onblur='this.size=1;' 
+                            <select id="startSelect" onfocus='this.size=10;' onblur='this.size=1;' 
                             onchange='this.size=1; this.blur();' name="start-time">
                                 <option value="1am">1am</option>
                                 <option value="2am">2am</option>
@@ -187,7 +187,7 @@
                     <span class="span">
                     <label id="end">End Time:</label>
                         <span class="dropdown">
-                            <select onfocus='this.size=10;' onblur='this.size=1;' 
+                            <select id="endSelect" onfocus='this.size=10;' onblur='this.size=1;' 
                             onchange='this.size=1; this.blur();' name="start-time">
                                 <option value="1am">1am</option>
                                 <option value="2am">2am</option>
@@ -228,7 +228,7 @@
                         <textarea></textarea>
                     </div>
 
-                    <button id="submit">Create</button>
+                    <button name="submit" id="submit" type="button" onclick="AddItem()">Create</button>
                 </form>
             </div>
         </div>

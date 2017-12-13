@@ -71,5 +71,36 @@ window.onload = function()
     });    
 }
 
+function AddItem() {
+    let eventName = document.querySelector("#eventName");
+    let days = document.querySelectorAll("#boxes input");
+    let start = document.querySelector("#startSelect");
+    let end = document.querySelector("#endSelect");
+    let startTime = start.options[start.selectedIndex];
+    let endTime = end.options[end.selectedIndex];
+    let color = document.querySelector("#full");
+    let description = document.querySelector("#description textarea");
+
+    /*
+    console.log(eventName.value);
+
+    for(let x = 0; x < days.length; x++)
+    {
+        if(days[x].checked === true)
+        {
+            console.log(days[x].value);            
+        }
+    }
+
+    console.log(startTime.value);
+
+    console.log(endTime.value);
+
+    console.log(color.value);
+
+    console.log(description.value);
+    */
+}
+
 
 
