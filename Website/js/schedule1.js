@@ -67,7 +67,6 @@ function ColorCreator() {
     let cardArray = document.querySelectorAll("#cards-content div .col")
     let tempValue = 0;
 
-
     for(let x = 0; x < cardArray.length; x++)
     {
         switch(x % 7)

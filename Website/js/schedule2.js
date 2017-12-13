@@ -76,30 +76,149 @@ function AddItem() {
     let days = document.querySelectorAll("#boxes input");
     let start = document.querySelector("#startSelect");
     let end = document.querySelector("#endSelect");
-    let startTime = start.options[start.selectedIndex];
-    let endTime = end.options[end.selectedIndex];
     let color = document.querySelector("#full");
     let description = document.querySelector("#description textarea");
+    let grid = document.querySelectorAll(".activity-col");
+    
+    let startTime = start.options[start.selectedIndex];
+    let endTime = end.options[end.selectedIndex];
+    
+    let height = "45px";
+    let breakLine = document.createElement("br");
 
-    /*
-    console.log(eventName.value);
+    let card = document.createElement("div");
+    card.style.height = height;
+    card.style.backgroundColor = color.value;
+
+    let text = document.createElement("div");
+    text.innerHTML = eventName.value;
+    text.appendChild(breakLine);
+    text.innerHTML += startTime.value + " - " + endTime.value;
+    text.style.color = "black";
+
+    text.style.paddingTop = "7px";
+    card.appendChild(text.cloneNode());
 
     for(let x = 0; x < days.length; x++)
     {
         if(days[x].checked === true)
         {
-            console.log(days[x].value);            
+            switch(days[x].value)
+            {
+                case "sunday":
+                    for(let y = 0; y < grid.length; y++)
+                    {
+                        if($(grid[y]).hasClass("empty"))
+                        {
+                            grid[y].appendChild(card.cloneNode());
+                            $(grid[y]).removeClass("empty");
+                            break;
+                        }
+                        else
+                        {
+                            y += 6;
+                        }
+                    }
+                    break;
+
+                case "monday":
+                    for(let y = 1; y < grid.length; y++)
+                    {
+                        if($(grid[y]).hasClass("empty"))
+                        {
+                            grid[y].appendChild(card.cloneNode());
+                            $(grid[y]).removeClass("empty");
+                            break;
+                        }
+                        else
+                        {
+                            y += 6;
+                        }
+                    }
+                    break;
+
+                case "tuesday":
+                    for(let y = 2; y < grid.length; y++)
+                    {
+                        if($(grid[y]).hasClass("empty"))
+                        {
+                            grid[y].appendChild(card.cloneNode());
+                            $(grid[y]).removeClass("empty");
+                            break;
+                        }
+                        else
+                        {
+                            y += 6;
+                        }
+                    }
+                    break;
+
+                case "wednesday":
+                    for(let y = 3; y < grid.length; y++)
+                    {
+                        if($(grid[y]).hasClass("empty"))
+                        {
+                            grid[y].appendChild(card.cloneNode());
+                            $(grid[y]).removeClass("empty");
+                            break;
+                        }
+                        else
+                        {
+                            y += 6;
+                        }
+                    }
+                    break;
+
+                case "thursday":
+                    for(let y = 4; y < grid.length; y++)
+                    {
+                        if($(grid[y]).hasClass("empty"))
+                        {
+                            grid[y].appendChild(card.cloneNode());
+                            $(grid[y]).removeClass("empty");
+                            break;
+                        }
+                        else
+                        {
+                            y += 6;
+                        }
+                    }
+                    break;
+
+                case "friday":
+                    for(let y = 5; y < grid.length; y++)
+                    {
+                        if($(grid[y]).hasClass("empty"))
+                        {
+                            grid[y].appendChild(card.cloneNode());
+                            $(grid[y]).removeClass("empty");
+                            break;
+                        }
+                        else
+                        {
+                            y += 6;
+                        }
+                    }
+                    break;
+
+                case "saturday":
+                    for(let y = 6; y < grid.length; y++)
+                    {
+                        if($(grid[y]).hasClass("empty"))
+                        {
+                            grid[y].appendChild(card.cloneNode());
+                            $(grid[y]).removeClass("empty");
+                            break;
+                        }
+                        else
+                        {
+                            y += 6;
+                        }
+                    }
+                    break;
+            }
         }
     }
-
-    console.log(startTime.value);
-
-    console.log(endTime.value);
-
-    console.log(color.value);
-
-    console.log(description.value);
-    */
 }
 
 
