@@ -212,7 +212,7 @@ h1 span {
     display: block;
     font-size: 1.5em;
     transition: 0.3s;
-    color: gray;
+    color: black;
 }
 #hamburger a:hover {
     color: lightgray;
@@ -247,6 +247,7 @@ h2 {
 
 #sources {
 	padding: 20px;
+	line-height: 1.3em;
 }
 
 #above-beyond {
@@ -388,5 +389,16 @@ footer a {
 		font-family: sans-serif;
 		padding-left: 13px;
 		transform: translateY(7px);
+	}
+
+	#notes div {
+		width: 80%;
+		margin-left: 6%;
+		height: auto;
+		background-color: darkgray;
+	}
+
+	#sources {
+		padding: 10px;
 	}
 }

@@ -229,7 +229,7 @@ h1 span {
     display: block;
     font-size: 1.5em;
     transition: 0.3s;
-    color: gray;
+    color: black;
 }
 #hamburger a:hover {
     color: lightgray;
