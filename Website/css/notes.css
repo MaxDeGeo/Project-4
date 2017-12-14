@@ -49,6 +49,7 @@ table {
 
 body {
 	background-color: lightgray;
+	font-family: sans-serif;
 }
 
 /* Column Section */
@@ -164,6 +165,60 @@ nav {
 
 /* Content */
 
+#notes {
+	margin-top: 40px;
+	margin-left: 3%;
+}
+
+h2 {
+	font-size: 2em;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	font-weight: bolder;
+}
+
+#notes div {
+	width: 90%;
+	margin-left: 5%;
+	height: auto;
+	background-color: darkgray;
+}
+
+#sources {
+	padding: 20px;
+}
+
+#above-beyond {
+	padding: 10px;
+	line-height: 1.3em;
+	font-size: 1.5em;
+}
+
+#learned {
+	padding: 10px;
+	line-height: 1.3em;
+	font-size: 1.5em;
+}
+
+#changes {
+	padding: 10px;
+	line-height: 1.3em;
+	font-size: 1.5em;
+}
+
+#notes a {
+	font-size: 1.5em;
+	color: black;
+	transition: .5s;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+#notes a:hover {
+	transition: .5s;
+	color: lightgray;
+}
 
 
 /* Content End */
@@ -188,6 +243,7 @@ footer {
 	font-family: sans-serif;
 	color: darkgray;
 	line-height: 1.1em;
+	margin-top: 50px;
 }
 
 footer div p {
