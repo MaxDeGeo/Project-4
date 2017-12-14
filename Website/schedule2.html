@@ -26,13 +26,13 @@
     <article id="schedule2">
         <div id="days">
             <div class="wrapper">
-                <div class="col"><div class="center-text">Sunday</div></div>
-                <div class="col"><div class="center-text">Monday</div></div>
-                <div class="col"><div class="center-text">Tuesday</div></div>
-                <div class="col"><div class="center-text">Wednesday</div></div>
-                <div class="col"><div class="center-text">Thursday</div></div>
-                <div class="col"><div class="center-text">Friday</div></div>
-                <div class="col"><div class="center-text">Saturday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Sunday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Monday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Tuesday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Wednesday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Thursday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Friday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Saturday</div></div>
             </div>
         </div>
         <div id="schedule">
@@ -221,13 +221,7 @@
                         <label>Choose Color:</label>
                         <input id="full"/>
                     </div>
-
-                    <div id="description">
-                        <label>Description:</label>
-                        <br>
-                        <textarea></textarea>
-                    </div>
-
+                    
                     <button name="submit" id="submit" type="button" onclick="AddItem()">Create</button>
                 </form>
             </div>

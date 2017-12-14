@@ -229,9 +229,19 @@ nav {
 }
 
 .col {
-	background: gray;
+	background-color: gray;
 	text-align: center;
 	height: 45px;
+	transition: .5s;
+}
+
+.col div:hover {
+	cursor: pointer;
+}
+
+.col:hover {
+	background-color: rgb(165, 165, 165);
+	transition: .5s
 }
 
 .time-col {

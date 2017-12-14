@@ -3,6 +3,8 @@ window.onload = function()
     let popUp = document.querySelector("#popUp");
     
     let button = document.querySelector("#button");
+
+
     
     let span = document.querySelector(".close");
 
@@ -13,7 +15,7 @@ window.onload = function()
     span.onclick = function() {
         popUp.style.display = "none";
     }
-    
+
     window.onclick = function(event) {
         if(event.target == popUp) {
             popUp.style.display = "none";
@@ -72,12 +74,16 @@ window.onload = function()
 }
 
 function AddItem() {
+
+    let popUp = document.querySelector("#popUp");
+
+    popUp.style.display = "none";
+
     let eventName = document.querySelector("#eventName");
     let days = document.querySelectorAll("#boxes input");
     let start = document.querySelector("#startSelect");
     let end = document.querySelector("#endSelect");
     let color = document.querySelector("#full");
-    let description = document.querySelector("#description textarea");
     let grid = document.querySelectorAll(".activity-col");
     
     let startTime = start.options[start.selectedIndex];
@@ -94,11 +100,13 @@ function AddItem() {
     text.innerHTML = eventName.value;
     text.appendChild(breakLine);
     text.innerHTML += startTime.value + " - " + endTime.value;
+    
+    
     text.style.color = "black";
-
     text.style.paddingTop = "7px";
-    card.appendChild(text.cloneNode());
 
+    card.appendChild(text);
+    
     for(let x = 0; x < days.length; x++)
     {
         if(days[x].checked === true)
@@ -110,7 +118,7 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode());
+                            grid[y].appendChild(card.cloneNode(true));
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -126,7 +134,7 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode());
+                            grid[y].appendChild(card.cloneNode(true));
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -142,7 +150,7 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode());
+                            grid[y].appendChild(card.cloneNode(true));
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -158,7 +166,7 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode());
+                            grid[y].appendChild(card.cloneNode(true));
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -174,7 +182,7 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode());
+                            grid[y].appendChild(card.cloneNode(true));
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -190,7 +198,7 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode());
+                            grid[y].appendChild(card.cloneNode(true));
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -206,7 +214,7 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode());
+                            grid[y].appendChild(card.cloneNode(true));
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -219,7 +227,139 @@ function AddItem() {
             }
         }
     }
+    document.querySelector("form").reset();
 }
 
+function Display(event) {
 
+    let day = event.target.innerHTML;
+    let grid = document.querySelectorAll(".activity-col");
+    let width = grid[0].style.width;
+    let height = "45px";
+
+    if(event.target.style.color === "black")
+    {
+        event.target.style.color = "white";
+    }
+    else
+    {
+        event.target.style.color = "black";
+    }
+
+    switch(day)
+    {
+        case "Sunday":
+
+            for(let x = 0; x < grid.length; x++)
+            {
+                if(grid[x].style.visibility === "visible")
+                {
+                    grid[x].style.visibility = "hidden";
+                    x+=6;
+                }
+                else
+                {
+                    grid[x].style.visibility = "visible";
+                    x+=6;
+                }
+            }
+            break;
+
+        case "Monday":
+            for(let x = 1; x < grid.length; x++)
+            {
+                if(grid[x].style.visibility === "visible")
+                {
+                    grid[x].style.visibility = "hidden";
+                    x+=6;
+                }
+                else
+                {
+                    grid[x].style.visibility = "visible";
+                    x+=6;
+                }
+            }
+            break;
+
+        case "Tuesday":
+            for(let x = 2; x < grid.length; x++)
+            {
+                if(grid[x].style.visibility === "visible")
+                {
+                    grid[x].style.visibility = "hidden";
+                    x+=6;
+                }
+                else
+                {
+                    grid[x].style.visibility = "visible";
+                    x+=6;
+                }
+            }
+            break;
+
+        case "Wednesday":
+            for(let x = 3; x < grid.length; x++)
+            {
+                if(grid[x].style.visibility === "visible")
+                {
+                    grid[x].style.visibility = "hidden";
+                    x+=6;
+                }
+                else
+                {
+                    grid[x].style.visibility = "visible";
+                    x+=6;
+                }
+            }
+            break;
+
+        case "Thursday":
+            for(let x = 4; x < grid.length; x++)
+            {
+                if(grid[x].style.visibility === "visible")
+                {
+                    grid[x].style.visibility = "hidden";
+                    x+=6;
+                }
+                else
+                {
+                    grid[x].style.visibility = "visible";
+                    x+=6;
+                }
+            }
+            break;
+
+        case "Friday":
+            for(let x = 5; x < grid.length; x++)
+            {
+                if(grid[x].style.visibility === "visible")
+                {
+                    grid[x].style.visibility = "hidden";
+                    x+=6;
+                }
+                else
+                {
+                    grid[x].style.visibility = "visible";
+                    x+=6;
+                }
+            }
+            break;
+
+        case "Saturday":
+            for(let x = 6; x < grid.length; x++)
+            {
+                if(grid[x].style.visibility === "visible")
+                {
+                    grid[x].style.visibility = "hidden";
+                    x+=6;
+                }
+                else
+                {
+                    grid[x].style.visibility = "visible";
+                    x+=6;
+                }
+            }
+            break;
+    }
+}
 

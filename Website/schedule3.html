@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/schedule3.css">
     <link rel='stylesheet' href='css/spectrum.css'/> <!-- Color Picker CSS-->
-    <script src="js/schedule3.js"></script>
+    <script src="js/schedule3.js"></script> 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src='js/spectrum.js'></script> <!-- Color Picker Script-->
@@ -26,108 +26,108 @@
     <article id="schedule3">
         <div id="days">
             <div class="wrapper">
-                <div class="col"><div class="center-text">Monday</div></div>
-                <div class="col"><div class="center-text">Tuesday</div></div>
-                <div class="col"><div class="center-text">Wednesday</div></div>
-                <div class="col"><div class="center-text">Thursday</div></div>
-                <div class="col"><div class="center-text">Friday</div></div>
-                <div class="col"><div class="center-text">Saturday</div></div>
-                <div class="col"><div class="center-text">Sunday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Sunday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Monday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Tuesday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Wednesday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Thursday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Friday</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">Saturday</div></div>
             </div>
         </div>
         <div id="schedule">
             <div id="activity-wrapper">
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
-                <div class="activity-col droppable"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
+                <div class="activity-col empty"><div class="center-text"></div></div>
             </div>
         </div>
 
@@ -135,7 +135,7 @@
         <div id="popUp" class="pop-Up">
             <div class="pop-Up-content">
                 <span class="close">&times;</span>
-                <form>
+                <form method="POST">
                     <input id="eventName" type="text" placeholder="Add Event Name" name="eventTitle"><br>
                     <div id="daysOfWeek">
                         <p>Select Days</p>
@@ -155,7 +155,7 @@
                     <span class="span">
                     <label id="start">Start Time:</label>
                         <span class="dropdown">
-                            <select onfocus='this.size=10;' onblur='this.size=1;' 
+                            <select id="startSelect" onfocus='this.size=10;' onblur='this.size=1;' 
                             onchange='this.size=1; this.blur();' name="start-time">
                                 <option value="1am">1am</option>
                                 <option value="2am">2am</option>
@@ -187,7 +187,7 @@
                     <span class="span">
                     <label id="end">End Time:</label>
                         <span class="dropdown">
-                            <select onfocus='this.size=10;' onblur='this.size=1;' 
+                            <select id="endSelect" onfocus='this.size=10;' onblur='this.size=1;' 
                             onchange='this.size=1; this.blur();' name="start-time">
                                 <option value="1am">1am</option>
                                 <option value="2am">2am</option>
@@ -221,14 +221,8 @@
                         <label>Choose Color:</label>
                         <input id="full"/>
                     </div>
-
-                    <div id="description">
-                        <label>Description:</label>
-                        <br>
-                        <textarea></textarea>
-                    </div>
-
-                    <button id="submit">Create</button>
+                    
+                    <button name="submit" id="submit" type="button" onclick="AddItem()">Create</button>
                 </form>
             </div>
         </div>
