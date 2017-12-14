@@ -298,6 +298,8 @@ footer a {
 
 @media (max-width: 375px) {
 
+	/* Nav Section */
+
 	#inline {
 		display: none;
 	}
@@ -365,20 +367,7 @@ footer a {
 		transform: translateY(7px);
 	}
 
-	/*
-	#hamburger {
-		display: block;
-	}
-
-	.hamburger-icon {
-		display: block;
-	}
-
-	#inline {
-		display : none;
-	}
-*/
-
+	/* Nav Section End */
 
 	#home {
 		padding-top: 100px;

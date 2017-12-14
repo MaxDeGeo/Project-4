@@ -396,6 +396,8 @@ footer a {
 
 @media (max-width: 375px) {
 
+	/* Nav Section */
+
 	#inline {
 		display: none;
 	}
@@ -462,6 +464,8 @@ footer a {
 		padding-left: 13px;
 		transform: translateY(7px);
 	}
+
+	/* Nav Section End */
 
 	#days {
 		display: none;
