@@ -108,22 +108,52 @@ function AddItem() {
     card.style.backgroundColor = color.value;
 
     let remove = document.createElement("div");
-    remove.style.float = "right";
-    remove.style.color = "black";
-    remove.style.marginRight = "5px";
-    remove.style.marginTop = "-40px";
-    remove.style.fontSize = "1.5em";
-    remove.innerHTML = "&times;";
-    remove.style.cursor = "pointer";
+    
+    if($(window).width() <= 375)
+    {
+        remove.style.float = "right";
+        remove.style.color = "black";
+        remove.style.marginRight = "2px";
+        remove.style.marginTop = "-24px";
+        remove.style.fontSize = "1.5em";
+        remove.innerHTML = "&times;";
+        remove.style.cursor = "pointer";
+    }
+    else
+    {
+        remove.style.float = "right";
+        remove.style.color = "black";
+        remove.style.marginRight = "5px";
+        remove.style.marginTop = "-40px";
+        remove.style.fontSize = "1.5em";
+        remove.innerHTML = "&times;";
+        remove.style.cursor = "pointer";
+    }
+
 
     let edit = document.createElement("div");
-    edit.style.float = "left";
-    edit.style.color = "black";
-    edit.style.marginLeft = "5px";
-    edit.style.marginTop = "-42px";
-    edit.style.fontSize = "1.5em";
-    edit.innerHTML = "o";    
-    edit.style.cursor = "pointer";
+
+    if($(window).width() <= 375)
+    {
+        edit.style.float = "left";
+        edit.style.color = "black";
+        edit.style.marginLeft = "2px";
+        edit.style.marginTop = "-25px";
+        edit.style.fontSize = "1.5em";
+        edit.innerHTML = "o";    
+        edit.style.cursor = "pointer";
+    }
+    else
+    {
+        edit.style.float = "left";
+        edit.style.color = "black";
+        edit.style.marginLeft = "5px";
+        edit.style.marginTop = "-42px";
+        edit.style.fontSize = "1.5em";
+        edit.innerHTML = "o";    
+        edit.style.cursor = "pointer";
+    }
+
 
     let text = document.createElement("div");
     text.innerHTML = eventName.value;

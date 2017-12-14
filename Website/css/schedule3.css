@@ -632,4 +632,8 @@ footer a {
 	#responsive-boxes {
 		display: block;
 	}
+
+	.activity-col {
+		font-size: .4em;
+	}
 }
