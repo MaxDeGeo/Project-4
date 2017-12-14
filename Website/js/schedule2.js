@@ -80,7 +80,17 @@ function AddItem() {
     popUp.style.display = "none";
 
     let eventName = document.querySelector("#eventName");
-    let days = document.querySelectorAll("#boxes input");
+    let days;
+
+    if($(window).width() <= 375)
+    {
+        days =  document.querySelectorAll("#responsive-boxes input");
+    }
+    else
+    {
+        days = document.querySelectorAll("#boxes input");
+    }
+
     let start = document.querySelector("#startSelect");
     let end = document.querySelector("#endSelect");
     let color = document.querySelector("#full");
