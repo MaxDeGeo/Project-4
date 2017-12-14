@@ -49,6 +49,7 @@ table {
 
 body {
 	background-color: lightgray;
+	font-family: sans-serif;
 }
 
 /* Column Section */
@@ -165,21 +166,19 @@ nav {
 /* Content */
 
 #home {
-	padding-top: 200px;
+	padding-top: 80px;
 }
 
 .content {
-	width: 70%;
+
 	height: auto;
-	display: flex;
-	margin-left: 15%;
 	padding-bottom: 50px;
 }
 
 img {
 	height: 100%;
 	width: 90%;
-	margin-left: 5%;
+	margin-left: 8%;
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);
 	transition: box-shadow .3s ease-out;
 }
@@ -188,6 +187,21 @@ img:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: box-shadow .3s ease-in; 
 }
+
+.content-box { 
+	width: 80%;
+	display: flex;
+	margin-top: 30px;
+	margin-left: 8%;
+}
+
+.content-box .col-two-third {
+	background-color: darkgray;
+	font-size: 1.2em;
+	padding: 10px;
+	line-height: 1.1em;
+}
+
 /* Content Section End */
 
 /* Footer */
@@ -220,3 +234,29 @@ footer a {
 	color: darkgray;
 }
 /* Footer End */
+
+
+@media (max-width: 375px) {
+
+	#home {
+		padding-top: 100px;
+	}
+
+	.col-third {
+		width: 100%;
+	}
+
+	.col-two-third {
+		width: 100%;
+	}
+	.content-box {
+		flex-direction: column;
+	}
+
+	.col-third img {
+		padding-bottom: 30px;
+	}
+
+
+
+}
