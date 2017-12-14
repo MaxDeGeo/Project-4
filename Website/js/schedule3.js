@@ -16,11 +16,11 @@ window.onload = function()
         popUp.style.display = "none";
     }
 
-    window.onclick = function(event) {
-        if(event.target == popUp) {
-            popUp.style.display = "none";
-        }
-    }
+//    window.onclick = function(event) {
+  //      if(event.target == popUp) {
+    //        popUp.style.display = "none";
+      //  }
+    //}
 
     $(".basic").spectrum({
         color: "#f00",
@@ -96,17 +96,36 @@ function AddItem() {
     card.style.height = height;
     card.style.backgroundColor = color.value;
 
+    let remove = document.createElement("div");
+    remove.style.float = "right";
+    remove.style.color = "black";
+    remove.style.marginRight = "5px";
+    remove.style.marginTop = "-40px";
+    remove.style.fontSize = "1.5em";
+    remove.innerHTML = "&times;";
+    remove.style.cursor = "pointer";
+
+    let edit = document.createElement("div");
+    edit.style.float = "left";
+    edit.style.color = "black";
+    edit.style.marginLeft = "5px";
+    edit.style.marginTop = "-42px";
+    edit.style.fontSize = "1.5em";
+    edit.innerHTML = "o";    
+    edit.style.cursor = "pointer";
+
     let text = document.createElement("div");
     text.innerHTML = eventName.value;
     text.appendChild(breakLine);
     text.innerHTML += startTime.value + " - " + endTime.value;
     
-    
     text.style.color = "black";
     text.style.paddingTop = "7px";
 
     card.appendChild(text);
-    
+    card.appendChild(remove);
+    card.appendChild(edit);
+
     for(let x = 0; x < days.length; x++)
     {
         if(days[x].checked === true)
@@ -118,7 +137,11 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode(true));
+                            let c = card.cloneNode(true);
+                            c.children[1].addEventListener("click", window.Delete);
+                            c.children[2].addEventListener("click", window.Edit);
+                            grid[y].appendChild(c);
+                            
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -134,7 +157,11 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode(true));
+                            let c = card.cloneNode(true);
+                            c.children[1].addEventListener("click", window.Delete);
+                            c.children[2].addEventListener("click", window.Edit);
+                            grid[y].appendChild(c);
+                            
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -150,7 +177,11 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode(true));
+                            let c = card.cloneNode(true);
+                            c.children[1].addEventListener("click", window.Delete);
+                            c.children[2].addEventListener("click", window.Edit);
+                            grid[y].appendChild(c);
+                            
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -166,7 +197,11 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode(true));
+                            let c = card.cloneNode(true);
+                            c.children[1].addEventListener("click", window.Delete);
+                            c.children[2].addEventListener("click", window.Edit);
+                            grid[y].appendChild(c);
+                            
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -182,7 +217,11 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode(true));
+                            let c = card.cloneNode(true);
+                            c.children[1].addEventListener("click", window.Delete);
+                            c.children[2].addEventListener("click", window.Edit);
+                            grid[y].appendChild(c);
+                            
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -198,7 +237,11 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode(true));
+                            let c = card.cloneNode(true);
+                            c.children[1].addEventListener("click", window.Delete);
+                            c.children[2].addEventListener("click", window.Edit);
+                            grid[y].appendChild(c);
+                            
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -214,7 +257,11 @@ function AddItem() {
                     {
                         if($(grid[y]).hasClass("empty"))
                         {
-                            grid[y].appendChild(card.cloneNode(true));
+                            let c = card.cloneNode(true);
+                            c.children[1].addEventListener("click", window.Delete);
+                            c.children[2].addEventListener("click", window.Edit);
+                            grid[y].appendChild(c);
+                            
                             $(grid[y]).removeClass("empty");
                             break;
                         }
@@ -363,3 +410,121 @@ function Display(event) {
     }
 }
 
+window.Delete = function (event) {
+    //event.target.parentElement.className = " empty";
+    $(event.target.parentElement.parentElement).addClass("empty");
+    event.target.parentElement.remove();
+}
+
+window.Edit = function (event) {
+
+    $(event.target.parentElement.parentElement).addClass("empty");
+    event.target.parentElement.remove();
+    
+    let popUp = document.querySelector("#popUp");
+
+    popUp.style.display = "block";
+    
+    /*
+
+    let phrase = event.target.parentElement.innerHTML;
+
+    let index = phrase.indexOf(">") + 1
+    
+    let title = "";
+
+    for(let x = index; x < phrase.length; x++)
+    {
+        if(phrase.substr(x, 1) !== "<")
+        {
+            title += phrase.substr(x, 1);
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    //console.log(title);
+
+    let start = getPosition(phrase, ">", 2) + 1;
+
+    let startTime = "";
+
+    let endingIndex = 0;
+    for(let x = start; x < phrase.length; x++)
+    {
+        if(phrase.substr(x, 1) !== " ")
+        {
+            startTime += phrase.substr(x, 1);
+        }
+        else
+        {
+            endingIndex = x - 1;
+            break;
+        }
+    }
+
+    //console.log(startTime);
+    
+    //let end = getPosition(phrase, " - ", 2) + 1;
+
+    
+    let endTime = "";
+
+    for(let x = endingIndex + 4; x < phrase.length; x++)
+    {
+        if(phrase.substr(x, 1) !== "<")
+        {
+            endTime += phrase.substr(x, 1);
+        }
+        else
+        {
+            break;
+        }
+    }
+
+
+
+
+
+    //console.log(endTime);
+    
+    let color = event.target.parentElement.parentElement.backgroundColor;
+
+    document.querySelector("#eventName").value = title;
+
+    document.querySelector("#startSelect").value = startTime;
+
+    document.querySelector("#endSelect").value = endTime;
+
+    document.querySelector("#colorChoice").style.backgroundColor = color;
+
+
+
+    popUp.style.display = "block";
+
+    let submit = document.querySelector("#submit");
+
+    submit.onclick = function() 
+    {
+        phrase = document.createElement("div");
+        phrase.innerHTML = document.querySelector("#eventName").value;
+        phrase.appendChild(document.createElement("br"))
+        phrase.innerHTML += document.querySelector("#startSelect").value + " - " + document.querySelector("#endSelect").value;
+        
+        let color = document.querySelector("#colorChoice");
+
+        event.target.parentElement.innerHTML = phrase.innerHTML;
+        event.target.style.backgroundColor = color.value;
+
+        phrase.style.color = "black";
+        phrase.style.paddingTop = "7px";
+        
+    }
+    */
+}
+
+function getPosition(string, subString, index) {
+   return string.split(subString, index).join(subString).length;
+}
