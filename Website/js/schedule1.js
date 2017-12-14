@@ -64,7 +64,18 @@ function LockInPlace(schedulePosition, contentElement) {
 }
 
 function ColorCreator() {
-    let cardArray = document.querySelectorAll("#cards-content div .col")
+
+    let cardArray;
+
+    if($(window).width() <= 375)
+    {
+        cardArray = document.querySelectorAll("#responsive-cards-content div .col");
+    }
+    else
+    {
+        cardArray = document.querySelectorAll("#cards-content div .col")        
+    }
+    
     let tempValue = 0;
 
     for(let x = 0; x < cardArray.length; x++)

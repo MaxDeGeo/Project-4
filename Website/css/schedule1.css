@@ -192,6 +192,12 @@ nav {
 	margin-left: 14%;
 }
 
+#responsive-days {
+	width: 80%;
+	margin-left: 14%;
+	display: none;
+}
+
 #schedule {
 	margin-top: 20px;
 	background-color: darkgray;
@@ -213,6 +219,18 @@ nav {
 }
 
 #cards-content {
+	background-color: darkgray;
+	margin-top: 25px;
+	width: 80%;
+	height: auto;
+	margin-left: 10%;
+	margin-bottom: 100px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#responsive-cards-content {
+	display: none;
 	background-color: darkgray;
 	margin-top: 25px;
 	width: 80%;
@@ -315,3 +333,23 @@ footer a {
 	color: darkgray;
 }
 /* Footer End */
+
+@media (max-width: 375px) {
+
+	#days {
+		display: none;
+	}
+
+	#responsive-days {
+		display: block;
+	}
+
+	#cards-content {
+		display: none;
+	}
+
+	#responsive-cards-content {
+		display: block;
+	}
+
+}
