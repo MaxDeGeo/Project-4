@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/schedule3.css">
     <link rel='stylesheet' href='css/spectrum.css'/> <!-- Color Picker CSS-->
     <link rel=icon href=images/favicon.png sizes="256x256" type="image/png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
     <script src="js/schedule3.js"></script> 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -14,6 +16,35 @@
     <title>Schedule 3</title>
 </head>
 <body class="Site">
+    <div id="inline">
+        <div class="name">
+            <p>Max De George</p>
+        </div>
+        <nav id="regular">
+            <a href="index.html">Home</a>
+            <a href="schedule1.html">Schedule 1</a>
+            <a href="schedule2.html">Schedule 2</a>
+            <a href="schedule3.html">Schedule 3</a>
+            <a href="notes.html">Notes</a>
+        </nav>
+    </div>
+
+    <i class="hamburger-icon fa fa-bars fa-2x" aria-hidden="true"></i>
+    <p id="hamburger-name">Max De George</p>    
+    <div id="hamburger">
+        <div class="name">
+        </div>
+        <nav id="hamburger-nav">
+            <a href="javascript:void(0)" class="closebtn">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="schedule1.html">Schedule 1</a>
+            <a href="schedule2.html">Schedule 2</a>
+            <a href="schedule3.html">Schedule 3</a>
+            <a href="notes.html">Notes</a>
+        </nav>
+    </div>
+    
+    <!--
     <nav id="inline">
         <div id="name"><a href="https://people.rit.edu/mtd3442/igme230/">Max De George</a></div>
         <div id="nav-section">
@@ -23,7 +54,8 @@
             <p><a href="schedule3.html">Schedule 3</a></p>
             <p><a href="notes.html">Notes</a></p>
         </div>
-    </nav>   
+    </nav>      
+--> 
     <article id="schedule3">
         <div id="days">
             <div class="wrapper">
@@ -34,6 +66,17 @@
                 <div class="col"><div onclick="Display(event)" class="center-text">Thursday</div></div>
                 <div class="col"><div onclick="Display(event)" class="center-text">Friday</div></div>
                 <div class="col"><div onclick="Display(event)" class="center-text">Saturday</div></div>
+            </div>
+        </div>
+        <div id="responsive-days">
+            <div class="wrapper">
+                <div class="col"><div onclick="Display(event)" class="center-text">S</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">M</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">T</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">W</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">T</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">F</div></div>
+                <div class="col"><div onclick="Display(event)" class="center-text">S</div></div>
             </div>
         </div>
         <div id="schedule">
@@ -149,75 +192,87 @@
                             <input type="checkbox" name="day" value="friday">Friday
                             <input type="checkbox" name="day" value="saturday">Saturday
                         </div>
+                        <div id="responsive-boxes">
+                            <input type="checkbox" name="day" value="sunday">Sunday<br>
+                            <input type="checkbox" name="day" value="monday">Monday<br>
+                            <input type="checkbox" name="day" value="tuesday">Tuesday<br>
+                            <input type="checkbox" name="day" value="wednesday">Wednesday<br>
+                            <input type="checkbox" name="day" value="thursday">Thursday<br>
+                            <input type="checkbox" name="day" value="friday">Friday<br>
+                            <input type="checkbox" name="day" value="saturday">Saturday<br>
+                        </div>
                     </div>
                     <br>
                     <br>
 
-                    <span class="span">
-                    <label id="start">Start Time:</label>
-                        <span class="dropdown">
-                            <select id="startSelect" onfocus='this.size=10;' onblur='this.size=1;' 
-                            onchange='this.size=1; this.blur();' name="start-time">
-                                <option value="1am">1am</option>
-                                <option value="2am">2am</option>
-                                <option value="3am">3am</option>
-                                <option value="4am">4am</option>
-                                <option value="5am">5am</option>
-                                <option value="6am">6am</option>
-                                <option value="7am">7am</option>
-                                <option value="8am">8am</option>
-                                <option value="9am">9am</option>
-                                <option value="10am">10am</option>
-                                <option value="11am">11am</option>
-                                <option value="12pm">12pm</option>
-                                <option value="1pm">1pm</option>
-                                <option value="2pm">2pm</option>
-                                <option value="3pm">3pm</option>
-                                <option value="4pm">4pm</option>
-                                <option value="5pm">5pm</option>
-                                <option value="6pm">6pm</option>
-                                <option value="7pm">7pm</option>
-                                <option value="8pm">8pm</option>
-                                <option value="9pm">9pm</option>
-                                <option value="10pm">10pm</option>
-                                <option value="11pm">11pm</option>
-                                <option value="12am">12am</option>
-                            </select>
+                    <div id="startTime">
+                        <span class="span">
+                        <label id="start">Start Time:</label>
+                            <span class="dropdown">
+                                <select id="startSelect" onfocus='this.size=10;' onblur='this.size=1;' 
+                                onchange='this.size=1; this.blur();' name="start-time">
+                                    <option value="1am">1am</option>
+                                    <option value="2am">2am</option>
+                                    <option value="3am">3am</option>
+                                    <option value="4am">4am</option>
+                                    <option value="5am">5am</option>
+                                    <option value="6am">6am</option>
+                                    <option value="7am">7am</option>
+                                    <option value="8am">8am</option>
+                                    <option value="9am">9am</option>
+                                    <option value="10am">10am</option>
+                                    <option value="11am">11am</option>
+                                    <option value="12pm">12pm</option>
+                                    <option value="1pm">1pm</option>
+                                    <option value="2pm">2pm</option>
+                                    <option value="3pm">3pm</option>
+                                    <option value="4pm">4pm</option>
+                                    <option value="5pm">5pm</option>
+                                    <option value="6pm">6pm</option>
+                                    <option value="7pm">7pm</option>
+                                    <option value="8pm">8pm</option>
+                                    <option value="9pm">9pm</option>
+                                    <option value="10pm">10pm</option>
+                                    <option value="11pm">11pm</option>
+                                    <option value="12am">12am</option>
+                                </select>
+                            </span>
                         </span>
-                    </span>
-                    <span class="span">
-                    <label id="end">End Time:</label>
-                        <span class="dropdown">
-                            <select id="endSelect" onfocus='this.size=10;' onblur='this.size=1;' 
-                            onchange='this.size=1; this.blur();' name="start-time">
-                                <option value="1am">1am</option>
-                                <option value="2am">2am</option>
-                                <option value="3am">3am</option>
-                                <option value="4am">4am</option>
-                                <option value="5am">5am</option>
-                                <option value="6am">6am</option>
-                                <option value="7am">7am</option>
-                                <option value="8am">8am</option>
-                                <option value="9am">9am</option>
-                                <option value="10am">10am</option>
-                                <option value="11am">11am</option>
-                                <option value="12pm">12pm</option>
-                                <option value="1pm">1pm</option>
-                                <option value="2pm">2pm</option>
-                                <option value="3pm">3pm</option>
-                                <option value="4pm">4pm</option>
-                                <option value="5pm">5pm</option>
-                                <option value="6pm">6pm</option>
-                                <option value="7pm">7pm</option>
-                                <option value="8pm">8pm</option>
-                                <option value="9pm">9pm</option>
-                                <option value="10pm">10pm</option>
-                                <option value="11pm">11pm</option>
-                                <option value="12am">12am</option>
-                            </select>
+                    </div>
+                    <div id="endTime">
+                        <span class="span">
+                        <label id="end">End Time:</label>
+                            <span class="dropdown">
+                                <select id="endSelect" onfocus='this.size=10;' onblur='this.size=1;' 
+                                onchange='this.size=1; this.blur();' name="start-time">
+                                    <option value="1am">1am</option>
+                                    <option value="2am">2am</option>
+                                    <option value="3am">3am</option>
+                                    <option value="4am">4am</option>
+                                    <option value="5am">5am</option>
+                                    <option value="6am">6am</option>
+                                    <option value="7am">7am</option>
+                                    <option value="8am">8am</option>
+                                    <option value="9am">9am</option>
+                                    <option value="10am">10am</option>
+                                    <option value="11am">11am</option>
+                                    <option value="12pm">12pm</option>
+                                    <option value="1pm">1pm</option>
+                                    <option value="2pm">2pm</option>
+                                    <option value="3pm">3pm</option>
+                                    <option value="4pm">4pm</option>
+                                    <option value="5pm">5pm</option>
+                                    <option value="6pm">6pm</option>
+                                    <option value="7pm">7pm</option>
+                                    <option value="8pm">8pm</option>
+                                    <option value="9pm">9pm</option>
+                                    <option value="10pm">10pm</option>
+                                    <option value="11pm">11pm</option>
+                                    <option value="12am">12am</option>
+                                </select>
+                            </span>
                         </span>
-                    </span>
-
+                    </div>
                     <div id="colorChoice">
                         <label>Choose Color:</label>
                         <input id="full"/>
@@ -236,5 +291,6 @@
             <p><a href="https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/">Sticky Footer by Philip Walton</a></p>
         </div>
     </footer>
+    <script src="js/hamburger.js"></script>
 </body>
 </html>
